@@ -1,0 +1,12 @@
+{
+    "event_time": "2026-01-31 21:15:00",
+    "latitude": 31.9375,
+    "longitude": 35.9375,
+    "temperature_c": 12.3,
+    "winddirection_deg": 188,
+    "weather_code": 0,
+    "is_day": 0,
+    "timezone": "GMT",
+    "elevation": 852.0,
+    "ingested_at": "2026-01-31 21:26:01.055979"
+}
