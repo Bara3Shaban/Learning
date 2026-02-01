@@ -103,3 +103,10 @@ ModuleNotFoundError: No module named 'processing_weather_staging'
 [2026-02-01T09:39:58.049+0000] {logging_mixin.py:188} INFO - [2026-02-01T09:39:58.049+0000] {dag.py:3036} INFO - Sync 1 DAGs
 [2026-02-01T09:39:58.083+0000] {logging_mixin.py:188} INFO - [2026-02-01T09:39:58.083+0000] {dag.py:3823} INFO - Setting next_dagrun for weather_raw_ingestion to 2026-02-01 09:39:00+00:00, run_after=2026-02-01 09:40:00+00:00
 [2026-02-01T09:39:58.104+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/weather_ingestion_dag.py took 0.124 seconds
+[2026-02-01T09:40:28.292+0000] {processor.py:161} INFO - Started process (PID=273) to work on /opt/airflow/dags/weather_ingestion_dag.py
+[2026-02-01T09:40:28.292+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/weather_ingestion_dag.py for tasks to queue
+[2026-02-01T09:40:28.293+0000] {logging_mixin.py:188} INFO - [2026-02-01T09:40:28.293+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/weather_ingestion_dag.py
+[2026-02-01T09:40:28.311+0000] {processor.py:840} INFO - DAG(s) 'weather_raw_ingestion' retrieved from /opt/airflow/dags/weather_ingestion_dag.py
+[2026-02-01T09:40:28.335+0000] {logging_mixin.py:188} INFO - [2026-02-01T09:40:28.335+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-02-01T09:40:28.355+0000] {logging_mixin.py:188} INFO - [2026-02-01T09:40:28.355+0000] {dag.py:3823} INFO - Setting next_dagrun for weather_raw_ingestion to 2026-02-01 09:40:00+00:00, run_after=2026-02-01 09:41:00+00:00
+[2026-02-01T09:40:28.371+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/weather_ingestion_dag.py took 0.081 seconds
