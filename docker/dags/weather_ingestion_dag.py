@@ -6,6 +6,7 @@ import json
 
 from ingestion.weather_api import fetch_weather
 from models.pydantic.weather import WeatherResponse
+#from processing.weather_staging import transform_weather_raw_to_staging
 
 STAGING_DIR = Path("/opt/airflow/data_lake/staging/weather")
 
@@ -14,6 +15,10 @@ def ingest_weather_task(**context):
     data = fetch_weather(city="Amman")
     weather=WeatherResponse.parse_obj(data)
     staging_record = weather.to_staging_dict()
+    
+    
+    #transform_weather_raw_to_staging(raw_file_path = "docker/data_lake/raw/weather/dt=('2026-01-31',)/weather_amman.json",staging_base_path="test")
+
 
     STAGING_DIR.mkdir(parents=True,exist_ok=True)
     output_file  = STAGING_DIR / f"{weather.current_weather.time}.json"
