@@ -29,7 +29,6 @@ class WeatherResponse(BaseModel):
     timezone: str
     timezone_abbreviation: str
     elevation: float
-
     current_weather_units: CurrentWeatherUnits
     current_weather: CurrentWeather
 
