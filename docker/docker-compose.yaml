@@ -7,7 +7,7 @@ x-airflow-common: &airflow-common
     AIRFLOW__CORE__LOAD_EXAMPLES: "false"
     AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: "true"
     PYTHONPATH: /opt/airflow/src
-    GOOGLE_APPLICATION_CREDENTIALS: /secrets/bq-key.json
+    GOOGLE_APPLICATION_CREDENTIALS: /opt/airflow/keys/bq-key.json
   volumes:
     - ~/.gcp/bq-learning-486107-8225f85e538f.json:/secrets/bq-key.json:ro
     - ./dags:/opt/airflow/dags
@@ -15,6 +15,7 @@ x-airflow-common: &airflow-common
     - ./plugins:/opt/airflow/plugins
     - ./src:/opt/airflow/src
     - ./data_lake:/opt/airflow/data_lake
+    - ./keys:/opt/airflow/keys
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
     - postgres

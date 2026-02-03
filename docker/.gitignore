@@ -1,0 +1,56 @@
+# =====================
+# Secrets & Credentials
+# =====================
+keys/
+*.json
+*.key
+
+# Explicitly ignore BigQuery / GCP service account keys
+**/keys/*.json
+**/*service-account*.json
+
+# =====================
+# Airflow
+# =====================
+logs/
+airflow.db
+airflow.cfg
+__pycache__/
+*.pyc
+
+# =====================
+# Data Lake (RAW files)
+# =====================
+data_lake/
+*.parquet
+*.csv
+*.jsonl
+
+# =====================
+# Docker
+# =====================
+.env
+.env.*
+docker-compose.override.yml
+
+# =====================
+# Python
+# =====================
+.venv/
+venv/
+env/
+pip-wheel-metadata/
+.eggs/
+*.egg-info/
+
+# =====================
+# IDE / OS
+# =====================
+.vscode/
+.idea/
+.DS_Store
+
+# =====================
+# Misc
+# =====================
+*.log
