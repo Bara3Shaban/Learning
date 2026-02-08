@@ -42,6 +42,10 @@ env/
 pip-wheel-metadata/
 .eggs/
 *.egg-info/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
 
 # =====================
 # IDE / OS
